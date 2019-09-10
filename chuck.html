@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="chuck.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>Chuck Norris Facts</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p id="citation" class="citation">Lorem Ipsum</p>
+            <button id="btn-quote" class="facts" value="citation">
+                <p>New Quotes</p>
+            </button>
+            <button class="facts">Encore</button>
+            <button class="facts">Plus</button>
+            <button class="facts">De</button>
+            <button class="facts">Facts</button>
+        </div>
+    </div>
+
+    <script>
+        let tab = ["C'est Chuck Norris qui a crée le langage C", "Chuck Norris peut créer un traitement de texte avec la souris", "L'ordinateur de Chuck Norris n'a pas de bouton CTRL, Chuck Norris a toujours le contrôle", "Chuck Norris sait comment créer une clé étrangére sur MYSQL"];
+        let quotes = document.getElementsByClassName("facts");
+        let p = document.getElementsByClassName("citation");
+        
+
+        function ChangeText() {    
+         let randomNumber= Math.floor(Math.random()* tab.length);          
+         document.getElementById("citation").innerHTML = tab[randomNumber];  
+         
+         let r, g, b;
+         r = randomColor();
+         console.log("r:"+r);
+
+         g = randomColor();
+         console.log("g:"+g);
+
+         b = randomColor();
+         console.log("b:"+b);
+
+         let bc = "rgb(" + r + "," + g + "," + b + ")"
+         console.log(bc);
+         document.body.style.backgroundColor = bc;
+
+         let button = document.getElementById("btn-quote");
+         button.style.backgroundColor = bc;
+
+         quotes.style.color = bc;
+         }
+        
+        for (let i=0; i<tab.length; i++){
+        quotes[i].addEventListener("click", ChangeText);
+         p[i].addEventListener("click", ChangeText);
+         }
+
+        
+
+        function randomColor()
+        {
+            let quotes = Math.floor(Math.random() * 256);
+            return quotes;
+        }
+        
+    </script>
+
+</body>
+</html>

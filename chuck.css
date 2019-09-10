@@ -1,0 +1,36 @@
+div{
+    display: flex;
+}
+
+.box{
+    width: 30%;
+    height: 300px;
+    margin-left: 700px;
+    background-color: white;
+}
+
+button{
+    height: 45px;
+    width: 20%;
+    position: relative;
+    top: 220px;
+    background-color: orange;
+}
+
+.citation{
+    position: relative;
+    height: 80px;
+    width: 70%;
+    color: black;
+}
+
+p{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: orange;
+}
